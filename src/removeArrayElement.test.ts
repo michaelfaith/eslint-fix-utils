@@ -21,7 +21,7 @@ describe("removeArrayElement", () => {
 
 		expect(() => [
 			...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements),
-		]).toThrowError("Cannot remove a null (blank) array element.");
+		]).toThrow("Cannot remove a null (blank) array element.");
 	});
 
 	it("should throw an error if the element is not a child of the parent array", () => {
@@ -38,7 +38,7 @@ describe("removeArrayElement", () => {
 
 		expect(() => [
 			...removeArrayElement(mockContext, mockFixer, mockElement, mockElements),
-		]).toThrowError("Node is not a child of the parent array.");
+		]).toThrow("Node is not a child of the parent array.");
 	});
 
 	it("should remove the element and trailing comma when it is not the last element", () => {
