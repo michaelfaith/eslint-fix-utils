@@ -34,7 +34,9 @@ export default defineConfig(
 		files: JS_TS_FILES,
 		languageOptions: {
 			parserOptions: {
-				projectService: { allowDefaultProject: ["*.config.*s"] },
+				projectService: {
+					allowDefaultProject: ["*.config.*s", ".simple-git-hooks.js"],
+				},
 				tsconfigRootDir: import.meta.dirname,
 			},
 		},
