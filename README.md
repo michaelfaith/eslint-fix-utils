@@ -35,20 +35,20 @@ You'll then be able to use any of its exported utilities in your rules.
 Version of [`addObjectProperty`](#addobjectproperty) that can be passed directly as a `fix` property.
 
 ```ts
-import { fixAddObjectProperty } from "eslint-fix-utils";
+import { fixAddObjectProperty } from 'eslint-fix-utils';
 
 // ...
 
 export function report(
-	node: ESTree.ObjectExpression,
-	propertyKey: string,
-	propertyValue: string,
+  node: ESTree.ObjectExpression,
+  propertyKey: string,
+  propertyValue: string,
 ) {
-	context.report({
-		fix: fixAddObjectProperty(context, node, propertyKey, propertyValue),
-		messageId,
-		node,
-	});
+  context.report({
+    fix: fixAddObjectProperty(context, node, propertyKey, propertyValue),
+    messageId,
+    node,
+  });
 }
 ```
 
@@ -57,16 +57,16 @@ export function report(
 Version of [`removeArrayElement`](#removearrayelement) that can be passed directly as a `fix` property.
 
 ```ts
-import { fixRemoveArrayElement } from "eslint-fix-utils";
+import { fixRemoveArrayElement } from 'eslint-fix-utils';
 
 // ...
 
 export function report(index: number, node: ESTree.ArrayExpression) {
-	context.report({
-		fix: fixRemoveArrayElement(context, index, node.elements),
-		messageId,
-		node: node.elements[index],
-	});
+  context.report({
+    fix: fixRemoveArrayElement(context, index, node.elements),
+    messageId,
+    node: node.elements[index],
+  });
 }
 ```
 
@@ -75,16 +75,16 @@ export function report(index: number, node: ESTree.ArrayExpression) {
 Version of [`removeObjectProperty`](#removeobjectproperty) that can be passed directly as a `fix` property.
 
 ```ts
-import { fixRemoveObjectProperty } from "eslint-fix-utils";
+import { fixRemoveObjectProperty } from 'eslint-fix-utils';
 
 // ...
 
 export function report(index: number, node: ESTree.ObjectExpression) {
-	context.report({
-		fix: fixRemoveObjectProperty(context, node.properties[index]),
-		messageId,
-		node: node.properties[index],
-	});
+  context.report({
+    fix: fixRemoveObjectProperty(context, node.properties[index]),
+    messageId,
+    node: node.properties[index],
+  });
 }
 ```
 
@@ -142,19 +142,19 @@ Parameters:
 4. `parentOrElements`: the array expression node, or its `.elements` array
 
 ```ts
-import { removeArrayElement } from "eslint-fix-utils";
+import { removeArrayElement } from 'eslint-fix-utils';
 
 // ...
 
 export function report(index: number, node: ESTree.ArrayExpression) {
-	context.report({
-		fix(fixer) {
-			// Removes the last element of the array:
-			return removeArrayElement(context, fixer, index, node.elements);
-		},
-		messageId,
-		node: node.elements[index],
-	});
+  context.report({
+    fix(fixer) {
+      // Removes the last element of the array:
+      return removeArrayElement(context, fixer, index, node.elements);
+    },
+    messageId,
+    node: node.elements[index],
+  });
 }
 ```
 
@@ -180,19 +180,19 @@ Parameters:
 3. `property`: the property node
 
 ```ts
-import { removeObjectProperty } from "eslint-fix-utils";
+import { removeObjectProperty } from 'eslint-fix-utils';
 
 // ...
 
 export function report(index: number, node: ESTree.ObjectExpression) {
-	context.report({
-		fix(fixer) {
-			// Removes the last property of the object:
-			return removeObjectProperty(context, fixer, node.properties[index]);
-		},
-		messageId,
-		node: node.properties[index],
-	});
+  context.report({
+    fix(fixer) {
+      // Removes the last property of the object:
+      return removeObjectProperty(context, fixer, node.properties[index]);
+    },
+    messageId,
+    node: node.properties[index],
+  });
 }
 ```
 

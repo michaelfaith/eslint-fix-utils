@@ -1,36 +1,36 @@
-import type { Rule } from "eslint";
+import type { Rule } from 'eslint';
 
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from 'vitest';
 
-import type { ArrayElementsOrParent } from "./removeArrayElement";
+import type { ArrayElementsOrParent } from './removeArrayElement';
 
-import { fixRemoveArrayElement } from "./fixRemoveArrayElement";
-import { removeArrayElement } from "./removeArrayElement";
+import { fixRemoveArrayElement } from './fixRemoveArrayElement';
+import { removeArrayElement } from './removeArrayElement';
 
-vi.mock("../src/removeArrayElement", () => ({
-	removeArrayElement: vi.fn(),
+vi.mock('../src/removeArrayElement', () => ({
+  removeArrayElement: vi.fn(),
 }));
 
-describe("fixRemoveArrayElement", () => {
-	it("should call removeArrayElement with the correct arguments when the fixer function is invoked", () => {
-		const mockContext = {} as Rule.RuleContext;
-		const mockFixer = {} as Rule.RuleFixer;
-		const mockElementOrIndex = 1;
-		const mockParentOrElements: ArrayElementsOrParent = [];
+describe('fixRemoveArrayElement', () => {
+  it('should call removeArrayElement with the correct arguments when the fixer function is invoked', () => {
+    const mockContext = {} as Rule.RuleContext;
+    const mockFixer = {} as Rule.RuleFixer;
+    const mockElementOrIndex = 1;
+    const mockParentOrElements: ArrayElementsOrParent = [];
 
-		const fixerFunction = fixRemoveArrayElement(
-			mockContext,
-			mockElementOrIndex,
-			mockParentOrElements,
-		);
+    const fixerFunction = fixRemoveArrayElement(
+      mockContext,
+      mockElementOrIndex,
+      mockParentOrElements,
+    );
 
-		fixerFunction(mockFixer);
+    fixerFunction(mockFixer);
 
-		expect(removeArrayElement).toHaveBeenCalledWith(
-			mockContext,
-			mockFixer,
-			mockElementOrIndex,
-			mockParentOrElements,
-		);
-	});
+    expect(removeArrayElement).toHaveBeenCalledWith(
+      mockContext,
+      mockFixer,
+      mockElementOrIndex,
+      mockParentOrElements,
+    );
+  });
 });

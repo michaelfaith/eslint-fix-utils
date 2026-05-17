@@ -1,9 +1,9 @@
-import type { Rule } from "eslint";
+import type { Rule } from 'eslint';
 
 import {
-	type ObjectProperty,
-	removeObjectProperty,
-} from "./removeObjectProperty";
+  type ObjectProperty,
+  removeObjectProperty,
+} from './removeObjectProperty';
 
 /**
  * Given an ObjectProperty, this function returns a fixer function that you can
@@ -16,9 +16,9 @@ import {
  * are no longer necessary.
  */
 export const fixRemoveObjectProperty = (
-	context: Rule.RuleContext,
-	property: ObjectProperty,
+  context: Rule.RuleContext,
+  property: ObjectProperty,
 ): ((fixer: Rule.RuleFixer) => Generator<Rule.Fix, void>) => {
-	return (fixer: Rule.RuleFixer) =>
-		removeObjectProperty(context, fixer, property);
+  return (fixer: Rule.RuleFixer) =>
+    removeObjectProperty(context, fixer, property);
 };

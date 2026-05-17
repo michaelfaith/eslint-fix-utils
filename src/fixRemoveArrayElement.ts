@@ -1,10 +1,10 @@
-import type { Rule } from "eslint";
+import type { Rule } from 'eslint';
 
 import {
-	type ArrayElement,
-	type ArrayElementsOrParent,
-	removeArrayElement,
-} from "./removeArrayElement";
+  type ArrayElement,
+  type ArrayElementsOrParent,
+  removeArrayElement,
+} from './removeArrayElement';
 
 /**
  * Given an ArrayExpression or the list of elements an ArrayExpression has, and
@@ -20,10 +20,10 @@ import {
  * no longer necessary.
  */
 export const fixRemoveArrayElement = (
-	context: Rule.RuleContext,
-	elementOrIndex: ArrayElement | number,
-	parentOrElements: ArrayElementsOrParent,
+  context: Rule.RuleContext,
+  elementOrIndex: ArrayElement | number,
+  parentOrElements: ArrayElementsOrParent,
 ): ((fixer: Rule.RuleFixer) => Generator<Rule.Fix, void>) => {
-	return (fixer: Rule.RuleFixer) =>
-		removeArrayElement(context, fixer, elementOrIndex, parentOrElements);
+  return (fixer: Rule.RuleFixer) =>
+    removeArrayElement(context, fixer, elementOrIndex, parentOrElements);
 };
