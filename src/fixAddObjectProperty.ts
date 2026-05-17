@@ -1,7 +1,7 @@
-import type { Rule } from "eslint";
-import type * as ESTree from "estree";
+import type { Rule } from 'eslint';
+import type * as ESTree from 'estree';
 
-import { addObjectProperty } from "./addObjectProperty";
+import { addObjectProperty } from './addObjectProperty';
 
 /**
  * Given an ObjectExpression and the key and value of a property,
@@ -16,17 +16,17 @@ import { addObjectProperty } from "./addObjectProperty";
  * are needed.
  */
 export const fixAddObjectProperty = (
-	context: Rule.RuleContext,
-	objectExpression: ESTree.ObjectExpression,
-	propertyKey: string,
-	propertyValue: unknown,
+  context: Rule.RuleContext,
+  objectExpression: ESTree.ObjectExpression,
+  propertyKey: string,
+  propertyValue: unknown,
 ): ((fixer: Rule.RuleFixer) => Generator<Rule.Fix, void>) => {
-	return (fixer: Rule.RuleFixer) =>
-		addObjectProperty(
-			context,
-			fixer,
-			objectExpression,
-			propertyKey,
-			propertyValue,
-		);
+  return (fixer: Rule.RuleFixer) =>
+    addObjectProperty(
+      context,
+      fixer,
+      objectExpression,
+      propertyKey,
+      propertyValue,
+    );
 };

@@ -1,16 +1,16 @@
 {
-	"compilerOptions": {
-		"declaration": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "bundler",
-		"noEmit": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"target": "ES2022",
-		"isolatedDeclarations": true,
-		"types": ["estree", "node"]
-	},
-	"include": ["src"]
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "isolatedDeclarations": true,
+    "types": ["estree", "node"]
+  },
+  "include": ["src"]
 }
