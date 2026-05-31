@@ -1,9 +1,9 @@
 import type { Rule } from 'eslint';
 
 import {
+  removeArrayElement,
   type ArrayElement,
   type ArrayElementsOrParent,
-  removeArrayElement,
 } from './removeArrayElement';
 
 /**

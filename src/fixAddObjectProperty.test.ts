@@ -1,6 +1,5 @@
 import type { Rule } from 'eslint';
 import type * as ESTree from 'estree';
-
 import { describe, expect, it, vi } from 'vitest';
 
 import { addObjectProperty } from './addObjectProperty';

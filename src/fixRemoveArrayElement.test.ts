@@ -1,11 +1,11 @@
 import type { Rule } from 'eslint';
-
 import { describe, expect, it, vi } from 'vitest';
 
-import type { ArrayElementsOrParent } from './removeArrayElement';
-
 import { fixRemoveArrayElement } from './fixRemoveArrayElement';
-import { removeArrayElement } from './removeArrayElement';
+import {
+  removeArrayElement,
+  type ArrayElementsOrParent,
+} from './removeArrayElement';
 
 vi.mock('../src/removeArrayElement', () => ({
   removeArrayElement: vi.fn(),
