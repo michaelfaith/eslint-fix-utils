@@ -38,7 +38,6 @@
     "format": "prettier .",
     "lint": "eslint . --max-warnings 0",
     "lint:knip": "knip",
-    "lint:spelling": "cspell \"**\" \".github/**/*\"",
     "test": "vitest",
     "type-check": "tsc"
   },
@@ -52,7 +51,6 @@
     "@vitest/coverage-v8": "4.1.2",
     "@vitest/eslint-plugin": "1.6.9",
     "console-fail-test": "0.6.1",
-    "cspell": "10.0.0",
     "eslint": "10.4.0",
     "eslint-plugin-jsdoc": "63.0.0",
     "eslint-plugin-jsonc": "3.1.0",
