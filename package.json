@@ -31,7 +31,6 @@
   "module": "lib/index.mjs",
   "types": "lib/index.d.mts",
   "files": [
-    "CHANGELOG.md",
     "lib/"
   ],
   "scripts": {
@@ -39,7 +38,6 @@
     "format": "prettier .",
     "lint": "eslint . --max-warnings 0",
     "lint:knip": "knip",
-    "lint:spelling": "cspell \"**\" \".github/**/*\"",
     "test": "vitest",
     "type-check": "tsc"
   },
@@ -47,12 +45,12 @@
     "@eslint-community/eslint-plugin-eslint-comments": "4.7.0",
     "@eslint/js": "10.0.1",
     "@eslint/markdown": "8.0.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@types/estree": "1.0.6",
     "@types/node": "24.12.0",
     "@vitest/coverage-v8": "4.1.2",
     "@vitest/eslint-plugin": "1.6.9",
     "console-fail-test": "0.6.1",
-    "cspell": "10.0.0",
     "eslint": "10.4.0",
     "eslint-plugin-jsdoc": "63.0.0",
     "eslint-plugin-jsonc": "3.1.0",

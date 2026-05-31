@@ -1,11 +1,12 @@
 import type { Rule } from 'eslint';
 import type * as ESTree from 'estree';
-
 import { describe, expect, it, vi } from 'vitest';
 
-import type { ArrayElement, ArrayElementsOrParent } from './removeArrayElement';
-
-import { removeArrayElement } from './removeArrayElement';
+import {
+  removeArrayElement,
+  type ArrayElement,
+  type ArrayElementsOrParent,
+} from './removeArrayElement';
 
 describe('removeArrayElement', () => {
   it('should throw an error if the element is null', () => {

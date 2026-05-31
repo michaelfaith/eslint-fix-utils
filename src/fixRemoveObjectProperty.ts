@@ -1,8 +1,8 @@
 import type { Rule } from 'eslint';
 
 import {
-  type ObjectProperty,
   removeObjectProperty,
+  type ObjectProperty,
 } from './removeObjectProperty';
 
 /**
