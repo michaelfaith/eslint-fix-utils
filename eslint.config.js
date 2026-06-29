@@ -70,6 +70,11 @@ export default defineConfig(
       jsdoc.configs['flat/stylistic-typescript-error'],
     ],
     files: TS_FILES,
+    rules: {
+      '@typescript-eslint/consistent-type-exports': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
+    },
   },
   {
     extends: [jsonc.configs['recommended-with-json']],
