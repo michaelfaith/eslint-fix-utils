@@ -4,8 +4,7 @@ import type * as ESTree from 'estree';
 export type ArrayElement = ESTree.Expression | ESTree.SpreadElement;
 
 export type ArrayElementsOrParent =
-  | ESTree.ArrayExpression
-  | ESTree.ArrayExpression['elements'];
+  ESTree.ArrayExpression | ESTree.ArrayExpression['elements'];
 
 /**
  * Given an ArrayExpression or the list of elements an ArrayExpression has,
