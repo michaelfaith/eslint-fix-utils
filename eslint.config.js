@@ -27,7 +27,6 @@ export default defineConfig(
       eslint.configs.recommended,
       comments.recommended,
       n.configs['flat/recommended'],
-      perfectionist.configs['recommended-natural'],
       regexp.configs['flat/recommended'],
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
@@ -41,12 +40,14 @@ export default defineConfig(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    plugins: {
+      perfectionist,
+    },
     rules: {
       'n/no-missing-import': 'off',
 
-      // Covered by Prettier
-      'perfectionist/sort-imports': 'off',
-      'perfectionist/sort-named-imports': 'off',
+      'perfectionist/sort-exports': 'error',
+      'perfectionist/sort-union-types': 'error',
 
       // Stylistic concerns that don't interfere with Prettier
       'logical-assignment-operators': [
