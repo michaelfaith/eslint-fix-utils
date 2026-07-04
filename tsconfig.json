@@ -8,7 +8,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2024",
+    "target": "ES2022",
     "isolatedDeclarations": true,
     "isolatedModules": true,
     "types": ["estree", "node"]
