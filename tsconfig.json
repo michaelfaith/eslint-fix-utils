@@ -8,10 +8,10 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022",
+    "target": "ES2024",
     "isolatedDeclarations": true,
     "isolatedModules": true,
     "types": ["estree", "node"]
   },
-  "include": ["src"]
+  "include": ["src", "*.config.ts"]
 }

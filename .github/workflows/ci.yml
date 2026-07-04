@@ -68,4 +68,4 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: ./.github/actions/prepare
       - run: pnpm install -D eslint@${{ matrix.eslint-version }}
-      - run: pnpm type-check
+      - run: pnpm typecheck

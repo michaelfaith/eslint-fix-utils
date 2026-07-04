@@ -1,10 +1,9 @@
 import { defineConfig } from 'vitest/config';
 
-export default defineConfig({
+const config: ReturnType<typeof defineConfig> = defineConfig({
   test: {
     clearMocks: true,
     coverage: {
-      all: true,
       include: ['src'],
       reporter: ['html', 'lcov', 'text'],
     },
@@ -12,3 +11,5 @@ export default defineConfig({
     setupFiles: ['console-fail-test/setup'],
   },
 });
+
+export default config;

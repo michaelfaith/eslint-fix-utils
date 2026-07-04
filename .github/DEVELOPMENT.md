@@ -84,11 +84,11 @@ You should be able to see suggestions from [TypeScript](https://typescriptlang.o
 However, it can be useful to run the TypeScript command-line (`tsc`) to type check all files in `src/`:
 
 ```shell
-pnpm type-check
+pnpm typecheck
 ```
 
 Add `--watch` to keep the type checker running in a watch mode that updates the display as you save files:
 
 ```shell
-pnpm type-check --watch
+pnpm typecheck --watch
 ```
