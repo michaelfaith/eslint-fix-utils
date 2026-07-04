@@ -16,6 +16,7 @@ jobs:
       - uses: ./.github/actions/prepare
       - run: pnpm build
       - run: node lib/index.mjs
+
   dedupe_check:
     name: Dedupe Check
     runs-on: ubuntu-latest
@@ -23,6 +24,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: ./.github/actions/prepare
       - run: pnpm dedupe --check --prefer-offline
+
   format_check:
     name: Format Check
     runs-on: ubuntu-latest
@@ -30,6 +32,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: ./.github/actions/prepare
       - run: pnpm format --list-different
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -37,6 +40,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: ./.github/actions/prepare
       - run: pnpm lint
+
   lint_knip:
     name: Lint Knip
     runs-on: ubuntu-latest
@@ -44,6 +48,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: ./.github/actions/prepare
       - run: pnpm lint:knip
+
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -55,7 +60,18 @@ jobs:
         if: always()
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-  type_check:
+
+  type_check_current:
+    name: Type Check (ESLint 10)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+      - uses: ./.github/actions/prepare
+      - run: pnpm typecheck
+
+  type_check_legacy:
     name: Type Check (ESLint ${{ matrix.eslint-version }})
     runs-on: ubuntu-latest
     strategy:
@@ -63,9 +79,8 @@ jobs:
       matrix:
         eslint-version:
           - 9
-          - 10
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: ./.github/actions/prepare
       - run: pnpm install -D eslint@${{ matrix.eslint-version }}
-      - run: pnpm type-check
+      - run: pnpm typecheck --project tsconfig.prod.json

@@ -3,6 +3,7 @@ import eslint from '@eslint/js';
 import eslintJson from '@eslint/json';
 import markdown from '@eslint/markdown';
 import vitest from '@vitest/eslint-plugin';
+import type { Linter } from 'eslint';
 import jsdoc from 'eslint-plugin-jsdoc';
 import jsonc from 'eslint-plugin-jsonc';
 import n from 'eslint-plugin-n';
@@ -17,7 +18,7 @@ const JS_FILES = ['**/*.js'];
 const TS_FILES = ['**/*.ts'];
 const JS_TS_FILES = [...JS_FILES, ...TS_FILES];
 
-export default defineConfig(
+const config: Linter.Config[] = defineConfig(
   {
     ignores: ['**/*.snap', 'coverage', 'lib', 'node_modules', 'pnpm-lock.yaml'],
   },
@@ -35,7 +36,7 @@ export default defineConfig(
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['*.config.*s', '.simple-git-hooks.js'],
+          allowDefaultProject: ['.simple-git-hooks.js'],
         },
         tsconfigRootDir: import.meta.dirname,
       },
@@ -44,10 +45,12 @@ export default defineConfig(
       perfectionist,
     },
     rules: {
+      '@typescript-eslint/consistent-type-exports': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
       'n/no-missing-import': 'off',
 
       'perfectionist/sort-exports': 'error',
-      'perfectionist/sort-union-types': 'error',
 
       // Stylistic concerns that don't interfere with Prettier
       'logical-assignment-operators': [
@@ -71,11 +74,6 @@ export default defineConfig(
       jsdoc.configs['flat/stylistic-typescript-error'],
     ],
     files: TS_FILES,
-    rules: {
-      '@typescript-eslint/consistent-type-exports': 'error',
-      '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/explicit-module-boundary-types': 'error',
-    },
   },
   {
     extends: [jsonc.configs['recommended-with-json']],
@@ -123,9 +121,11 @@ export default defineConfig(
     },
   },
   {
-    files: ['./eslint.config.js', './**/*.test.*'],
+    files: ['./eslint.config.ts', './**/*.test.*'],
     rules: {
       'n/no-unsupported-features/node-builtins': 'off',
     },
   },
 );
+
+export default config;
