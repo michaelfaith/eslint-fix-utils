@@ -1,21 +1,5 @@
 # Changelog
 
-# [0.4.0](https://github.com/michaelfaith/eslint-fix-utils/compare/0.3.0...0.4.0) (2025-06-12)
-
-### Features
-
-- bundle esm-only ([#170](https://github.com/michaelfaith/eslint-fix-utils/issues/170)) ([62e4938](https://github.com/michaelfaith/eslint-fix-utils/commit/62e4938aa6e67db31611e59b6fe19692069a56de)), closes [#167](https://github.com/michaelfaith/eslint-fix-utils/issues/167)
-
-# [0.3.0](https://github.com/michaelfaith/eslint-fix-utils/compare/0.2.1...0.3.0) (2025-06-11)
-
-### Bug Fixes
-
-- bump to create-typescript-app@2 with transitions action ([#79](https://github.com/michaelfaith/eslint-fix-utils/issues/79)) ([0bb023f](https://github.com/michaelfaith/eslint-fix-utils/commit/0bb023f96c18632b1c688d3210ae2567cee4b8e0)), closes [#75](https://github.com/michaelfaith/eslint-fix-utils/issues/75)
-
-### Features
-
-- remove support for node 18 ([#169](https://github.com/michaelfaith/eslint-fix-utils/issues/169)) ([1b076be](https://github.com/michaelfaith/eslint-fix-utils/commit/1b076be4533fc4e91e6c7af430ea2c597eb6d87b)), closes [#166](https://github.com/michaelfaith/eslint-fix-utils/issues/166)
-
 ## [0.4.3](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.2...v0.4.3) (2026-07-08)
 
 
@@ -36,6 +20,22 @@
 ### Features
 
 * add functions for adding a new property to an object ([#399](https://github.com/michaelfaith/eslint-fix-utils/issues/399)) ([47daa1b](https://github.com/michaelfaith/eslint-fix-utils/commit/47daa1be7da85f7939573057c6a649aa35cfdd77))
+
+# [0.4.0](https://github.com/michaelfaith/eslint-fix-utils/compare/0.3.0...0.4.0) (2025-06-12)
+
+### Features
+
+- bundle esm-only ([#170](https://github.com/michaelfaith/eslint-fix-utils/issues/170)) ([62e4938](https://github.com/michaelfaith/eslint-fix-utils/commit/62e4938aa6e67db31611e59b6fe19692069a56de)), closes [#167](https://github.com/michaelfaith/eslint-fix-utils/issues/167)
+
+# [0.3.0](https://github.com/michaelfaith/eslint-fix-utils/compare/0.2.1...0.3.0) (2025-06-11)
+
+### Bug Fixes
+
+- bump to create-typescript-app@2 with transitions action ([#79](https://github.com/michaelfaith/eslint-fix-utils/issues/79)) ([0bb023f](https://github.com/michaelfaith/eslint-fix-utils/commit/0bb023f96c18632b1c688d3210ae2567cee4b8e0)), closes [#75](https://github.com/michaelfaith/eslint-fix-utils/issues/75)
+
+### Features
+
+- remove support for node 18 ([#169](https://github.com/michaelfaith/eslint-fix-utils/issues/169)) ([1b076be](https://github.com/michaelfaith/eslint-fix-utils/commit/1b076be4533fc4e91e6c7af430ea2c597eb6d87b)), closes [#166](https://github.com/michaelfaith/eslint-fix-utils/issues/166)
 
 ## [0.2.1](https://github.com/michaelfaith/eslint-fix-utils/compare/0.2.0...0.2.1) (2025-01-28)
 
