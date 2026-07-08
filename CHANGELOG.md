@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.4.3](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.2...v0.4.3) (2026-07-08)
+
+
+### Bug Fixes
+
+* don't bundle estree types ([#588](https://github.com/michaelfaith/eslint-fix-utils/issues/588)) ([24c60f9](https://github.com/michaelfaith/eslint-fix-utils/commit/24c60f99aa6ea3a20a329c88200820779ef6d804))
+
+## [0.4.2](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.1...v0.4.2) (2026-03-01)
+
+
+### Bug Fixes
+
+* update repo references ([#430](https://github.com/michaelfaith/eslint-fix-utils/issues/430)) ([60ee8aa](https://github.com/michaelfaith/eslint-fix-utils/commit/60ee8aab7989ab4f904c7fe98e9169061530de5d))
+
+## [0.4.1](https://github.com/michaelfaith/eslint-fix-utils/compare/0.4.0...v0.4.1) (2026-02-01)
+
+
+### Features
+
+* add functions for adding a new property to an object ([#399](https://github.com/michaelfaith/eslint-fix-utils/issues/399)) ([47daa1b](https://github.com/michaelfaith/eslint-fix-utils/commit/47daa1be7da85f7939573057c6a649aa35cfdd77))
+
 # [0.4.0](https://github.com/michaelfaith/eslint-fix-utils/compare/0.3.0...0.4.0) (2025-06-12)
 
 ### Features
@@ -15,20 +36,6 @@
 ### Features
 
 - remove support for node 18 ([#169](https://github.com/michaelfaith/eslint-fix-utils/issues/169)) ([1b076be](https://github.com/michaelfaith/eslint-fix-utils/commit/1b076be4533fc4e91e6c7af430ea2c597eb6d87b)), closes [#166](https://github.com/michaelfaith/eslint-fix-utils/issues/166)
-
-## [0.4.2](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.1...v0.4.2) (2026-03-01)
-
-
-### Bug Fixes
-
-* update repo references ([#430](https://github.com/michaelfaith/eslint-fix-utils/issues/430)) ([60ee8aa](https://github.com/michaelfaith/eslint-fix-utils/commit/60ee8aab7989ab4f904c7fe98e9169061530de5d))
-
-## [0.4.1](https://github.com/michaelfaith/eslint-fix-utils/compare/0.4.0...v0.4.1) (2026-02-01)
-
-
-### Features
-
-* add functions for adding a new property to an object ([#399](https://github.com/michaelfaith/eslint-fix-utils/issues/399)) ([47daa1b](https://github.com/michaelfaith/eslint-fix-utils/commit/47daa1be7da85f7939573057c6a649aa35cfdd77))
 
 ## [0.2.1](https://github.com/michaelfaith/eslint-fix-utils/compare/0.2.0...0.2.1) (2025-01-28)
 
