@@ -16,6 +16,13 @@
 
 - remove support for node 18 ([#169](https://github.com/michaelfaith/eslint-fix-utils/issues/169)) ([1b076be](https://github.com/michaelfaith/eslint-fix-utils/commit/1b076be4533fc4e91e6c7af430ea2c597eb6d87b)), closes [#166](https://github.com/michaelfaith/eslint-fix-utils/issues/166)
 
+## [0.4.3](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.2...v0.4.3) (2026-07-08)
+
+
+### Bug Fixes
+
+* don't bundle estree types ([#588](https://github.com/michaelfaith/eslint-fix-utils/issues/588)) ([24c60f9](https://github.com/michaelfaith/eslint-fix-utils/commit/24c60f99aa6ea3a20a329c88200820779ef6d804))
+
 ## [0.4.2](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.1...v0.4.2) (2026-03-01)
 
 
