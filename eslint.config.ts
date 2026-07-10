@@ -20,7 +20,13 @@ const JS_TS_FILES = [...JS_FILES, ...TS_FILES];
 
 const config: Linter.Config[] = defineConfig(
   {
-    ignores: ['**/*.snap', 'coverage', 'lib', 'node_modules', 'pnpm-lock.yaml'],
+    ignores: [
+      '**/*.snap',
+      'coverage',
+      'dist',
+      'node_modules',
+      'pnpm-lock.yaml',
+    ],
   },
   { linterOptions: { reportUnusedDisableDirectives: 'error' } },
   {

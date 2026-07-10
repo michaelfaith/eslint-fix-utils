@@ -12,6 +12,5 @@
     "typescript",
     "typescriptreact",
     "yaml"
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  ]
 }
