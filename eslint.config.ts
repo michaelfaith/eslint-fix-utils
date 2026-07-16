@@ -70,7 +70,6 @@ const config: Linter.Config[] = defineConfig(
     },
     settings: {
       perfectionist: { partitionByComment: true, type: 'natural' },
-      vitest: { typecheck: true },
     },
   },
   {
@@ -104,6 +103,9 @@ const config: Linter.Config[] = defineConfig(
   {
     extends: [vitest.configs.recommended],
     files: ['**/*.test.*'],
+    settings: {
+      vitest: { typecheck: true },
+    },
   },
   {
     extends: [yml.configs['flat/recommended'], yml.configs['flat/prettier']],
