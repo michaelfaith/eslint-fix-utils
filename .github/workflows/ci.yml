@@ -57,9 +57,9 @@ jobs:
       - uses: ./.github/actions/prepare
       - run: pnpm run test --coverage
       - uses: codecov/codecov-action@v5
-        if: always()
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   type_check_current:
     name: Type Check (ESLint 10)
