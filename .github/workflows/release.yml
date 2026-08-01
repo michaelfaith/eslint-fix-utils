@@ -40,8 +40,7 @@ jobs:
       id-token: write # Required for OIDC
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: ./.github/actions/prepare
+      - uses: $/.github/actions/setup
       - name: Build and Publish
         run: |
           pnpm build
