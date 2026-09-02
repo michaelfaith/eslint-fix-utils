@@ -24,8 +24,8 @@ importers:
         specifier: 4.7.1
         version: 4.7.1(prettier@3.9.1)(supports-color@7.2.0)
       '@types/estree':
-        specifier: 1.0.6
-        version: 1.0.6
+        specifier: 1.0.9
+        version: 1.0.9
       '@types/node':
         specifier: 24.13.0
         version: 24.13.0
@@ -695,9 +695,6 @@ packages:
 
   '@types/esrecurse@4.3.1':
     resolution: {integrity: sha512-xJBAbDifo5hpffDBuHl0Y8ywswbiAp/Wi7Y/GtAgSlZyIABppyurxVueOPE8LUQOxdlgi6Zqce7uoEpqNTeiUw==}
-
-  '@types/estree@1.0.6':
-    resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
@@ -2602,8 +2599,6 @@ snapshots:
 
   '@types/esrecurse@4.3.1': {}
 
-  '@types/estree@1.0.6': {}
-
   '@types/estree@1.0.9': {}
 
   '@types/hast@3.0.5':
@@ -2963,11 +2958,11 @@ snapshots:
       eslint: 10.9.0(jiti@2.7.0)(supports-color@7.2.0)
       semver: 7.8.5
 
-  eslint-fix-utils@0.4.3(@types/estree@1.0.6)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-fix-utils@0.4.3(@types/estree@1.0.9)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       eslint: 10.9.0(jiti@2.7.0)(supports-color@7.2.0)
     optionalDependencies:
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.9
 
   eslint-json-compat-utils@0.2.3(@eslint/json@2.0.1)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0))(jsonc-eslint-parser@3.3.0):
     dependencies:
@@ -3036,12 +3031,12 @@ snapshots:
   eslint-plugin-package-json@1.8.0(@eslint/json@2.0.1)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       '@altano/repository-tools': 2.0.5
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.9
       change-case: 5.4.4
       detect-indent: 7.0.2
       detect-newline: 4.0.1
       eslint: 10.9.0(jiti@2.7.0)(supports-color@7.2.0)
-      eslint-fix-utils: 0.4.3(@types/estree@1.0.6)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint-fix-utils: 0.4.3(@types/estree@1.0.9)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint-json-compat-utils: 0.2.3(@eslint/json@2.0.1)(eslint@10.9.0(jiti@2.7.0)(supports-color@7.2.0))(jsonc-eslint-parser@3.3.0)
       jsonc-eslint-parser: 3.3.0
       package-json-validator: 1.6.1
@@ -3104,7 +3099,7 @@ snapshots:
       '@humanfs/node': 0.16.8
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.9
       ajv: 6.15.0
       cross-spawn: 7.0.6
       debug: 4.4.3(supports-color@7.2.0)
@@ -3148,7 +3143,7 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.9
 
   esutils@2.0.3: {}
 
