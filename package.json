@@ -45,7 +45,7 @@
     "@eslint/markdown": "8.0.3",
     "@ianvs/prettier-plugin-sort-imports": "4.7.1",
     "@types/estree": "1.0.9",
-    "@types/node": "24.13.0",
+    "@types/node": "24.13.3",
     "@typescript/native": "npm:typescript@7.0.2",
     "@vitest/coverage-v8": "4.1.11",
     "@vitest/eslint-plugin": "1.6.27",
