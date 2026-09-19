@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.3...v0.4.4) (2026-09-19)
+
+
+### Bug Fixes
+
+* export `package.json` ([#720](https://github.com/michaelfaith/eslint-fix-utils/issues/720)) ([a529e51](https://github.com/michaelfaith/eslint-fix-utils/commit/a529e5183017860be3a2829d197f39cd5e5c6d62))
+
 ## [0.4.3](https://github.com/michaelfaith/eslint-fix-utils/compare/v0.4.2...v0.4.3) (2026-07-08)
 
 
