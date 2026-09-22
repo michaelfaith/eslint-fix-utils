@@ -20,13 +20,7 @@ const JS_TS_FILES = [...JS_FILES, ...TS_FILES];
 
 const config: Linter.Config[] = defineConfig(
   {
-    ignores: [
-      '**/*.snap',
-      'coverage',
-      'dist',
-      'node_modules',
-      'pnpm-lock.yaml',
-    ],
+    ignores: ['**/*.snap', 'coverage', 'dist', 'node_modules', 'pnpm-lock.yaml'],
   },
   { linterOptions: { reportUnusedDisableDirectives: 'error' } },
   {
@@ -58,12 +52,8 @@ const config: Linter.Config[] = defineConfig(
 
       'perfectionist/sort-exports': 'error',
 
-      // Stylistic concerns that don't interfere with Prettier
-      'logical-assignment-operators': [
-        'error',
-        'always',
-        { enforceForIfStatements: true },
-      ],
+      // Stylistic concerns that don't interfere with formatter
+      'logical-assignment-operators': ['error', 'always', { enforceForIfStatements: true }],
       'no-useless-rename': 'error',
       'object-shorthand': 'error',
       'operator-assignment': 'error',
@@ -112,20 +102,14 @@ const config: Linter.Config[] = defineConfig(
     files: ['**/*.{yml,yaml}'],
     rules: {
       'yml/file-extension': ['error', { extension: 'yml' }],
-      'yml/sort-sequence-values': [
-        'error',
-        { order: { type: 'asc' }, pathPattern: '^.*$' },
-      ],
+      'yml/sort-sequence-values': ['error', { order: { type: 'asc' }, pathPattern: '^.*$' }],
     },
   },
   {
     files: ['pnpm-workspace.yaml'],
     rules: {
       'yml/file-extension': 'off',
-      'yml/sort-keys': [
-        'error',
-        { order: { type: 'asc' }, pathPattern: '^.*$' },
-      ],
+      'yml/sort-keys': ['error', { order: { type: 'asc' }, pathPattern: '^.*$' }],
     },
   },
   {

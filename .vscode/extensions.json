@@ -1,8 +1,7 @@
 {
   "recommendations": [
-    "DavidAnson.vscode-markdownlint",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
+    "oxc.oxc-vscode",
     "streetsidesoftware.code-spell-checker",
     "vitest.explorer"
   ]

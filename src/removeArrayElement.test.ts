@@ -20,9 +20,9 @@ describe('removeArrayElement', () => {
     const mockElements = [null, null];
     const mockIndex = 0;
 
-    expect(() => [
-      ...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements),
-    ]).toThrow('Cannot remove a null (blank) array element.');
+    expect(() => [...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements)]).toThrow(
+      'Cannot remove a null (blank) array element.',
+    );
   });
 
   it('should throw an error if the element is not a child of the parent array', () => {
@@ -57,9 +57,7 @@ describe('removeArrayElement', () => {
     ];
     const mockIndex = 1;
 
-    const fixes = [
-      ...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements),
-    ];
+    const fixes = [...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements)];
 
     expect(remove).toHaveBeenCalledWith(mockElements[1]);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Trailing comma
@@ -81,9 +79,7 @@ describe('removeArrayElement', () => {
     ];
     const mockIndex = 1;
 
-    const fixes = [
-      ...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements),
-    ];
+    const fixes = [...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements)];
 
     expect(remove).toHaveBeenCalledWith(mockElements[1]);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Trailing comma
@@ -105,9 +101,7 @@ describe('removeArrayElement', () => {
     ];
     const mockIndex = 1;
 
-    const fixes = [
-      ...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements),
-    ];
+    const fixes = [...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements)];
 
     expect(remove).toHaveBeenCalledWith(mockElements[1]);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Preceding comma
@@ -126,9 +120,7 @@ describe('removeArrayElement', () => {
     const mockElements: ArrayElement[] = [{ type: 'Literal', value: 1 }];
     const mockIndex = 0;
 
-    const fixes = [
-      ...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements),
-    ];
+    const fixes = [...removeArrayElement(mockContext, mockFixer, mockIndex, mockElements)];
 
     expect(remove).toHaveBeenCalledWith(mockElements[0]);
     expect(fixes).toHaveLength(1);
@@ -153,14 +145,7 @@ describe('removeArrayElement', () => {
     const mockIndex: ArrayElement = { type: 'Literal', value: 2 };
     mockArrayExpression.elements.indexOf = vi.fn().mockReturnValue(1);
 
-    const fixes = [
-      ...removeArrayElement(
-        mockContext,
-        mockFixer,
-        mockIndex,
-        mockArrayExpression,
-      ),
-    ];
+    const fixes = [...removeArrayElement(mockContext, mockFixer, mockIndex, mockArrayExpression)];
 
     expect(remove).toHaveBeenCalledWith(mockArrayExpression.elements[1]);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Trailing comma
@@ -185,14 +170,7 @@ describe('removeArrayElement', () => {
     };
     const mockIndex = 1;
 
-    const fixes = [
-      ...removeArrayElement(
-        mockContext,
-        mockFixer,
-        mockIndex,
-        mockArrayExpression,
-      ),
-    ];
+    const fixes = [...removeArrayElement(mockContext, mockFixer, mockIndex, mockArrayExpression)];
 
     expect(remove).toHaveBeenCalledWith(mockArrayExpression.elements[1]);
     expect(fixes).toHaveLength(1);

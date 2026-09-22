@@ -22,11 +22,5 @@ export const fixAddObjectProperty = (
   propertyValue: unknown,
 ): ((fixer: Rule.RuleFixer) => Generator<Rule.Fix, void>) => {
   return (fixer: Rule.RuleFixer) =>
-    addObjectProperty(
-      context,
-      fixer,
-      objectExpression,
-      propertyKey,
-      propertyValue,
-    );
+    addObjectProperty(context, fixer, objectExpression, propertyKey, propertyValue);
 };
