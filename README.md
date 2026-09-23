@@ -39,11 +39,7 @@ import { fixAddObjectProperty } from 'eslint-fix-utils';
 
 // ...
 
-export function report(
-  node: ESTree.ObjectExpression,
-  propertyKey: string,
-  propertyValue: string,
-) {
+export function report(node: ESTree.ObjectExpression, propertyKey: string, propertyValue: string) {
   context.report({
     fix: fixAddObjectProperty(context, node, propertyKey, propertyValue),
     messageId,

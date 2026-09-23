@@ -7,7 +7,4 @@ export {
   type ArrayElementsOrParent,
   removeArrayElement,
 } from './removeArrayElement';
-export {
-  type ObjectProperty,
-  removeObjectProperty,
-} from './removeObjectProperty';
+export { type ObjectProperty, removeObjectProperty } from './removeObjectProperty';

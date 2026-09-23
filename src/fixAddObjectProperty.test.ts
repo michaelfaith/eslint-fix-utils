@@ -38,12 +38,7 @@ describe(fixAddObjectProperty, () => {
     const mockObjectExpression = {} as ESTree.ObjectExpression;
     const mockFixer = {} as Rule.RuleFixer;
 
-    const fixerFunction = fixAddObjectProperty(
-      mockContext,
-      mockObjectExpression,
-      'numberKey',
-      42,
-    );
+    const fixerFunction = fixAddObjectProperty(mockContext, mockObjectExpression, 'numberKey', 42);
 
     fixerFunction(mockFixer);
 
@@ -84,12 +79,7 @@ describe(fixAddObjectProperty, () => {
     const mockObjectExpression = {} as ESTree.ObjectExpression;
     const mockFixer = {} as Rule.RuleFixer;
 
-    const fixerFunction = fixAddObjectProperty(
-      mockContext,
-      mockObjectExpression,
-      'nullKey',
-      null,
-    );
+    const fixerFunction = fixAddObjectProperty(mockContext, mockObjectExpression, 'nullKey', null);
 
     fixerFunction(mockFixer);
 

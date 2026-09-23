@@ -19,9 +19,7 @@ describe('removeObjectProperty', () => {
       type: 'Property',
     } as ESTree.Property;
 
-    const fixes = [
-      ...removeObjectProperty(mockContext, mockFixer, mockProperty),
-    ];
+    const fixes = [...removeObjectProperty(mockContext, mockFixer, mockProperty)];
 
     expect(remove).toHaveBeenCalledWith(mockProperty);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Trailing comma
@@ -42,9 +40,7 @@ describe('removeObjectProperty', () => {
       type: 'Property',
     } as ESTree.Property;
 
-    const fixes = [
-      ...removeObjectProperty(mockContext, mockFixer, mockProperty),
-    ];
+    const fixes = [...removeObjectProperty(mockContext, mockFixer, mockProperty)];
 
     expect(remove).toHaveBeenCalledWith(mockProperty);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Preceding comma
@@ -65,9 +61,7 @@ describe('removeObjectProperty', () => {
       type: 'Property',
     } as ESTree.Property;
 
-    const fixes = [
-      ...removeObjectProperty(mockContext, mockFixer, mockProperty),
-    ];
+    const fixes = [...removeObjectProperty(mockContext, mockFixer, mockProperty)];
 
     expect(remove).toHaveBeenCalledWith(mockProperty);
     expect(fixes).toHaveLength(1);
@@ -87,9 +81,7 @@ describe('removeObjectProperty', () => {
       type: 'SpreadElement',
     } as ESTree.SpreadElement;
 
-    const fixes = [
-      ...removeObjectProperty(mockContext, mockFixer, mockProperty),
-    ];
+    const fixes = [...removeObjectProperty(mockContext, mockFixer, mockProperty)];
 
     expect(remove).toHaveBeenCalledWith(mockProperty);
     expect(remove).toHaveBeenCalledWith({ value: ',' }); // Trailing comma
@@ -110,9 +102,7 @@ describe('removeObjectProperty', () => {
       type: 'Property',
     } as ESTree.Property;
 
-    const fixes = [
-      ...removeObjectProperty(mockContext, mockFixer, mockProperty),
-    ];
+    const fixes = [...removeObjectProperty(mockContext, mockFixer, mockProperty)];
 
     expect(remove).toHaveBeenCalledWith(mockProperty);
     expect(fixes).toHaveLength(1);

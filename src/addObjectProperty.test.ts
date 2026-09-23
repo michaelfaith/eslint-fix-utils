@@ -21,20 +21,11 @@ describe(addObjectProperty, () => {
     } as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'testKey',
-        'testValue',
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'testKey', 'testValue'),
     ];
 
     expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '\n');
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "testKey": "testValue"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "testKey": "testValue"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -56,20 +47,11 @@ describe(addObjectProperty, () => {
     } as unknown as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'newKey',
-        'newValue',
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'newKey', 'newValue'),
     ];
 
     expect(insertTextAfterRange).toHaveBeenCalledWith([10, 20], ',');
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [11, 21],
-      '  "newKey": "newValue"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([11, 21], '  "newKey": "newValue"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -91,20 +73,11 @@ describe(addObjectProperty, () => {
     } as unknown as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'newKey',
-        'newValue',
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'newKey', 'newValue'),
     ];
 
     expect(insertTextAfterRange).toHaveBeenCalledWith([20, 21], '\n');
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [20, 21],
-      '  "newKey": "newValue"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([20, 21], '  "newKey": "newValue"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -133,10 +106,7 @@ describe(addObjectProperty, () => {
       ),
     ];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "stringKey": "stringValue"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "stringKey": "stringValue"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -156,19 +126,10 @@ describe(addObjectProperty, () => {
     } as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'numberKey',
-        42,
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'numberKey', 42),
     ];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "numberKey": 42\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "numberKey": 42\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -188,19 +149,10 @@ describe(addObjectProperty, () => {
     } as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'booleanKey',
-        true,
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'booleanKey', true),
     ];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "booleanKey": true\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "booleanKey": true\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -220,19 +172,10 @@ describe(addObjectProperty, () => {
     } as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'nullKey',
-        null,
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'nullKey', null),
     ];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "nullKey": null\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "nullKey": null\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -254,13 +197,7 @@ describe(addObjectProperty, () => {
     const objectValue = { nested: 'value' };
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'objectKey',
-        objectValue,
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'objectKey', objectValue),
     ];
 
     expect(insertTextAfterRange).toHaveBeenCalledWith(
@@ -288,19 +225,10 @@ describe(addObjectProperty, () => {
     const arrayValue = [1, 2, 3];
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'arrayKey',
-        arrayValue,
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'arrayKey', arrayValue),
     ];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "arrayKey": [1,2,3]\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "arrayKey": [1,2,3]\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -325,20 +253,11 @@ describe(addObjectProperty, () => {
     } as unknown as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'newKey',
-        'newValue',
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'newKey', 'newValue'),
     ];
 
     expect(insertTextAfterRange).toHaveBeenCalledWith([15, 25], ',');
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [16, 26],
-      '  "newKey": "newValue"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([16, 26], '  "newKey": "newValue"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -367,10 +286,7 @@ describe(addObjectProperty, () => {
       ),
     ];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "key\\"with\\"quotes": "value"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "key\\"with\\"quotes": "value"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -392,13 +308,7 @@ describe(addObjectProperty, () => {
     } as unknown as ESTree.ObjectExpression;
 
     const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'key',
-        'value',
-      ),
+      ...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'key', 'value'),
     ];
 
     expect(fixes).toHaveLength(2);
@@ -420,20 +330,9 @@ describe(addObjectProperty, () => {
       type: 'ObjectExpression',
     } as ESTree.ObjectExpression;
 
-    const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        '',
-        'value',
-      ),
-    ];
+    const fixes = [...addObjectProperty(mockContext, mockFixer, mockObjectExpression, '', 'value')];
 
-    expect(insertTextAfterRange).toHaveBeenCalledWith(
-      [0, 1],
-      '  "": "value"\n',
-    );
+    expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "": "value"\n');
     expect(fixes).toHaveLength(2);
   });
 
@@ -452,15 +351,7 @@ describe(addObjectProperty, () => {
       type: 'ObjectExpression',
     } as ESTree.ObjectExpression;
 
-    const fixes = [
-      ...addObjectProperty(
-        mockContext,
-        mockFixer,
-        mockObjectExpression,
-        'key',
-        '',
-      ),
-    ];
+    const fixes = [...addObjectProperty(mockContext, mockFixer, mockObjectExpression, 'key', '')];
 
     expect(insertTextAfterRange).toHaveBeenCalledWith([0, 1], '  "key": ""\n');
     expect(fixes).toHaveLength(2);
