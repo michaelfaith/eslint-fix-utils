@@ -2,7 +2,7 @@ import type { Rule } from 'eslint';
 import { describe, expect, it, vi } from 'vitest';
 
 import { fixRemoveObjectProperty } from './fixRemoveObjectProperty';
-import { removeObjectProperty, type ObjectProperty } from './removeObjectProperty';
+import { type ObjectProperty, removeObjectProperty } from './removeObjectProperty';
 
 vi.mock('../src/removeObjectProperty', () => ({
   removeObjectProperty: vi.fn(),

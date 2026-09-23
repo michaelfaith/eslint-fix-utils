@@ -51,6 +51,8 @@ const config: Linter.Config[] = defineConfig(
       'n/no-missing-import': 'off',
 
       'perfectionist/sort-exports': 'error',
+      'perfectionist/sort-named-exports': 'error',
+      'perfectionist/sort-named-imports': 'error',
 
       // Stylistic concerns that don't interfere with formatter
       'logical-assignment-operators': ['error', 'always', { enforceForIfStatements: true }],

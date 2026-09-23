@@ -1,6 +1,6 @@
 import type { Rule } from 'eslint';
 
-import { removeObjectProperty, type ObjectProperty } from './removeObjectProperty';
+import { type ObjectProperty, removeObjectProperty } from './removeObjectProperty';
 
 /**
  * Given an ObjectProperty, this function returns a fixer function that you can

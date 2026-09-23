@@ -3,9 +3,9 @@ import type * as ESTree from 'estree';
 import { describe, expect, it, vi } from 'vitest';
 
 import {
-  removeArrayElement,
   type ArrayElement,
   type ArrayElementsOrParent,
+  removeArrayElement,
 } from './removeArrayElement';
 
 describe('removeArrayElement', () => {
