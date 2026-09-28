@@ -39,6 +39,9 @@
     "test": "vitest",
     "typecheck": "tsc"
   },
+  "lint-staged": {
+    "*": "oxfmt --no-error-on-unmatched-pattern"
+  },
   "devDependencies": {
     "@arethetypeswrong/core": "0.18.5",
     "@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
@@ -81,8 +84,5 @@
   "packageManager": "pnpm@12.6.0",
   "engines": {
     "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
-  },
-  "lint-staged": {
-    "*": "oxfmt --no-error-on-unmatched-pattern"
   }
 }
