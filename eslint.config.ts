@@ -77,7 +77,7 @@ const config: Linter.Config[] = defineConfig(
     files: ['**/*.json', '**/*.jsonc'],
   },
   {
-    extends: [packageJson.configs.recommended],
+    extends: [packageJson.configs.recommended, packageJson.configs.stylistic],
     files: ['package.json'],
     plugins: {
       json: eslintJson,
