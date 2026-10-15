@@ -16,7 +16,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: mtfoley/pr-compliance-action@11b664f0fcf2c4ce954f05ccfcaab6e52b529f86 # main
+      - uses: mtfoley/pr-compliance-action@main
         with:
           body-auto-close: false
           ignore-authors: |-
