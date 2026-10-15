@@ -35,9 +35,7 @@ const config: Linter.Config[] = defineConfig(
     files: JS_TS_FILES,
     languageOptions: {
       parserOptions: {
-        projectService: {
-          allowDefaultProject: ['.simple-git-hooks.js'],
-        },
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
