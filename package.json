@@ -39,6 +39,9 @@
     "test": "vitest",
     "typecheck": "tsc"
   },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
