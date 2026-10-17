@@ -20,6 +20,7 @@ body:
     type: textarea
 description: Request that a new feature be added or an existing feature improved
 labels:
+  - 'status: in discussion'
   - 'type: feature'
 name: 🚀 Feature
 title: '🚀 Feature: <short description of the feature>'

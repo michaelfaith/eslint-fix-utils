@@ -23,5 +23,6 @@ body:
 description: Report a bug or request an enhancement in repository tooling
 labels:
   - 'area: tooling'
+  - 'status: in discussion'
 name: 🛠 Tooling
 title: '🛠 Tooling: <short description of the change>'

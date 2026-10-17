@@ -21,5 +21,6 @@ body:
 description: Report a typo or missing area of documentation
 labels:
   - 'area: documentation'
+  - 'status: in discussion'
 name: 📝 Documentation
 title: '📝 Documentation: <short description of the request>'
