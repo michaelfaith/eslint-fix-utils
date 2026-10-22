@@ -9,8 +9,6 @@ workflows:
         - 'actions/checkout@v7.0.1'
         - 'codecov/codecov-action@v7.1.1'
         - 'pnpm/setup@v3.1.1'
-    '.github/workflows/compliance.yml':
-        - 'mtfoley/pr-compliance-action@main'
     '.github/workflows/pr-review-requested.yml':
         - 'actions-ecosystem/action-remove-labels@v1.3.0'
     '.github/workflows/release.yml':
@@ -62,11 +60,6 @@ dependencies:
         commit: 'sha1-45996ed1f6d02564a971a2fa1b5860e934307cf7'
         owner_id: 16785467
         repo_id: 262236530
-    'mtfoley/pr-compliance-action@main':
-        ref: 'main'
-        commit: 'sha1-11b664f0fcf2c4ce954f05ccfcaab6e52b529f86'
-        owner_id: 3792749
-        repo_id: 411003249
     'pnpm/setup@v3.1.1':
         ref: 'v3.1.1'
         commit: 'sha1-a0881977cd8ea73b1ed212236c99ca10dcc80cf4'
