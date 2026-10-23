@@ -3,12 +3,12 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.3'
 workflows:
-    '.github/workflows/accessibility-alt-text-bot.yml':
-        - 'github/accessibility-alt-text-bot@v1.7.3'
     '.github/workflows/ci.yml':
         - 'actions/checkout@v7.0.1'
         - 'codecov/codecov-action@v7.1.1'
         - 'pnpm/setup@v3.1.1'
+    '.github/workflows/octoguide.yml':
+        - 'octoguide/bot@0.29.0'
     '.github/workflows/pr-review-requested.yml':
         - 'actions-ecosystem/action-remove-labels@v1.3.0'
     '.github/workflows/release.yml':
@@ -50,16 +50,16 @@ dependencies:
         repo_id: 200299178
         uses:
             - 'actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd'
-    'github/accessibility-alt-text-bot@v1.7.3':
-        ref: 'v1.7.3'
-        commit: 'sha1-7e895d46677f15841def9acef1239ea7c12593a5'
-        owner_id: 9919
-        repo_id: 632088451
     'googleapis/release-please-action@v5.0.0':
         ref: 'v5.0.0'
         commit: 'sha1-45996ed1f6d02564a971a2fa1b5860e934307cf7'
         owner_id: 16785467
         repo_id: 262236530
+    'octoguide/bot@0.29.0':
+        ref: '0.29.0'
+        commit: 'sha1-ba5148358fb3d5f31ff41714db6045546d3bbfac'
+        owner_id: 231299902
+        repo_id: 964218711
     'pnpm/setup@v3.1.1':
         ref: 'v3.1.1'
         commit: 'sha1-a0881977cd8ea73b1ed212236c99ca10dcc80cf4'
