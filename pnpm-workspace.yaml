@@ -1,4 +1,4 @@
-allowBuilds:
-  simple-git-hooks: true
-minimumReleaseAge: 1440
+permissions:
+  simple-git-hooks:
+    build: false
 trustPolicy: no-downgrade
