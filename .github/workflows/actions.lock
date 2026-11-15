@@ -7,6 +7,10 @@ workflows:
         - 'actions/checkout@v7.0.1'
         - 'codecov/codecov-action@v7.1.1'
         - 'pnpm/setup@v3.1.2'
+    '.github/workflows/contributors.yml':
+        - 'actions/checkout@v7.0.1'
+        - 'joshuakgoldberg/all-contributors-auto-action@v0.7.0'
+        - 'pnpm/setup@v3.1.2'
     '.github/workflows/octoguide.yml':
         - 'octoguide/bot@0.33.0'
     '.github/workflows/pr-review-requested.yml':
@@ -55,6 +59,11 @@ dependencies:
         commit: 'sha1-45996ed1f6d02564a971a2fa1b5860e934307cf7'
         owner_id: 16785467
         repo_id: 262236530
+    'joshuakgoldberg/all-contributors-auto-action@v0.7.0':
+        ref: 'v0.7.0'
+        commit: 'sha1-c578423db9b2c14d3cee9c72f6c2aed31c128030'
+        owner_id: 3335181
+        repo_id: 634940144
     'octoguide/bot@0.33.0':
         ref: '0.33.0'
         commit: 'sha1-95af986081bee9208897c7ad8e056b19fadf2dc9'
