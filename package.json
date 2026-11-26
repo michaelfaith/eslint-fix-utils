@@ -34,7 +34,6 @@
     "build": "tsdown",
     "format": "oxfmt",
     "lint": "eslint . --max-warnings 0",
-    "lint:knip": "knip",
     "prepare": "simple-git-hooks",
     "test": "vitest",
     "typecheck": "tsc"
