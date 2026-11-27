@@ -8,11 +8,15 @@ on:
 concurrency:
   group: ${{ github.workflow }}
 
+permissions: {}
+
 jobs:
   release_please:
     name: Manage Release PR
     if: github.event.repository.fork != true
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
     steps:
