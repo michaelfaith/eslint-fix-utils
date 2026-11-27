@@ -8,11 +8,15 @@ on:
 concurrency:
   group: ${{ github.workflow }}
 
+permissions: {}
+
 jobs:
   release_please:
     name: Manage Release PR
     if: github.event.repository.fork != true
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
     steps:
@@ -59,6 +63,7 @@ jobs:
       - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
       - run: echo "npm_version=$(npm pkg get version | tr -d '"')" >> "$GITHUB_ENV"
       - uses: apexskier/github-release-commenter@v1.4.1
         with:
