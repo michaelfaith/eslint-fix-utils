@@ -21,6 +21,8 @@ jobs:
         uses: actions/create-github-app-token@v3.4.0
         with:
           client-id: ${{ vars.FAITHBOT_APP_CLIENT_ID }}
+          permission-contents: write
+          permission-pull-requests: write
           private-key: ${{ secrets.FAITHBOT_APP_PRIVATE_KEY }}
 
       - name: Release Please
